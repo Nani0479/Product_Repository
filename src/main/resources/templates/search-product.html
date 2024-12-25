@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+	</head>
+	<body>
+		<div>
+		<form th:action="@{/search}" method="post">
+		<label>Enter Id :</label>
+		<input type="number" name="id" required>
+		<button type="submit">Search</button>
+	</form></div>
+	
+	<div th:if="${product!=null}">
+				<h2>Product Details</h2>
+				<p><strong>ID:</strong><span th:text="${product.id}"></span></p>
+				<p><strong>Name:</strong><span th:text="${product.name}"></span></p>
+				<p><strong>brand:</strong><span th:text="${product.brand}"></span></p>
+				<p><strong>madeIn:</strong><span th:text="${product.madin}"></span></p>
+				<p><strong>price:</strong><span th:text="${product.price}"></span></p>
+				<p><strong>quantity:</strong><span th:text="${product.quantity}"></span></p>
+				<p><strong>discountrate:</strong><span th:text="${product.disscount}"></span></p>
+				<p><strong>taxrate:</strong><span th:text="${product.tax}"></span></p>
+				<p><strong>offerprice:</strong><span th:text="${product.offerPrice}"></span></p>
+				<p><strong>finalprice:</strong><span th:text="${product.finalPrice}"></span></p>
+				<p><strong>stockprice:</strong><span th:text="${product.stockValue}" ></span></p>
+					
+			</div>
+			<div th:if="${product==null}">
+				<h2>Product not found.....!</h2>
+			</div>
+			
+
+</body>
+</html>

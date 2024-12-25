@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Product Form</title>
+		<style>
+			fieldset{
+				background-color: white;
+				width: 300px;
+			}
+			body{
+				background-color: whitesmoke;
+				
+				padding-left: 600px;
+				
+			}
+			input:hover{
+				border-color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<fieldset>
+		<h1 style="color: red;">Product Form</h1>
+		<form th:action="@{/saveproduct}" method="post">
+			<label>Product name :</label>
+			<input type="text" name="name" required><br><br>
+			
+			<label>Product madIn :</label>
+			<input type="text" name="madin" required><br><br>
+			<label>Product Brand :</label>
+			<input type="text" name="brand" required><br><br>
+			<label>Product price :</label>
+			<input type="number" name="price" required><br><br>
+			<label>Product Quantity :</label>
+			<input type="number" name="quantity" required><br><br>
+			<label>Product disscount :</label>
+			<input type="number" name="disscount" required><br><br>
+			
+			<input type="submit" value="save product">&nbsp;&nbsp;
+			<input type="reset" value="clear"><br><br>
+			
+			<p><a href="contact.html">Contact Us</a>&nbsp;|&nbsp;<a href="about.html">About Us</a></p>
+		</form></fieldset>
+	</body>
+</html>
